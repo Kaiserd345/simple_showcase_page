@@ -64,9 +64,11 @@ body {
 }
 
 .showcase-item {
-    width: 1024px;
+    box-sizing: content-box;
+    width: 90%;
     height: 15vh;
-    margin: 0px auto 10px;
+    padding: 0 15px;
+    margin: 0 auto 10px;
     display: inherit;
     flex-direction: row;
     justify-content: space-between;
@@ -103,7 +105,7 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 1024px;
+    /*width: 1024px;*/
     margin: 0 auto;
     list-style: none;
 }
@@ -127,4 +129,29 @@ body {
     font-size: 14px;
     color: white;
     text-transform: uppercase;
+}
+
+/* tablet */
+@media screen and (max-width: 768px) {
+
+    .showcase-item {
+        width: 100%;
+        height: 40vh;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .showcase-item__logo {
+        margin-bottom: 15px;
+    }
+
+    .showcase-item-credit {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 10px;
+    }
+
+    .showcase-item-credit div {
+        padding-left: 5px;
+    }
 }
