@@ -1,6 +1,6 @@
 body {
     font-family: "Roboto", Roboto, Arial, sans-serif;
-    font-size: 18px;
+    font-size: 15px;
 }
 
 .button {
@@ -90,3 +90,41 @@ body {
     text-align: center;
 }
 
+/*FOOTER STYLES*/
+
+.footer {
+    width: 100%;
+    padding: 10px 0 20px;
+    background-color: #46699e;
+    text-align: center;
+}
+
+.footer-nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 1024px;
+    margin: 0 auto;
+    list-style: none;
+}
+
+.footer-nav__link {
+    display: block;
+    padding: 10px 5px;
+    border-bottom: 2px solid transparent;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.footer-nav__link:hover {
+    color: #d7d5d5;
+    border-bottom: 2px solid #d7d5d5;
+}
+
+.footer-rights {
+    margin-top: 30px;
+    font-size: 14px;
+    color: white;
+    text-transform: uppercase;
+}
