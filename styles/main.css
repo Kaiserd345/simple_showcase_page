@@ -65,8 +65,8 @@ body {
 
 .showcase-item {
     width: 1024px;
-    height: 12vh;
-    margin: 10px auto;
+    height: 15vh;
+    margin: 0px auto 10px;
     display: inherit;
     flex-direction: row;
     justify-content: space-between;
@@ -79,5 +79,14 @@ body {
 }
 .showcase-item__logo img{
     width: 100%;
+    margin-left: 3px;
+}
+
+/*SEARCH FORM STYLE*/
+
+.search-form {
+    width: 30%;
+    margin: 0 auto;
+    text-align: center;
 }
 
