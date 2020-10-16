@@ -13,30 +13,32 @@
     <header class="header">
         <div class="header-content">
             <a href="#" class="header-content__logo">Aidacredit</a>
-            <button class="button-main header-content__button" type="button">Контакты</button>
+            <button class="button button-main" type="button">Контакты</button>
         </div>
     </header>
 
     <main>
 
         <div class="showcase">
-            <div class="showcase__logo"><img src="" alt=""></div>
-            <div class="showcase-credit-sum">
-                <h3 class="credit-sum__title">Сумма займа</h3>
-                <p class="credit-sum__limit">До 100 000 Р</p>
+            <div class="showcase-item">
+                <div class="showcase-item__logo"><img src="./img/bank1.png" alt=""></div>
+                <div class="showcase-item-credit">
+                    <div class="credit__sum-title">Сумма займа:</div>
+                    <div class="credit__sum-limit">До 100 000 Р</div>
+                </div>
+                <div class="showcase-item-credit">
+                    <div class="credit__rate-bid">Ставка:</div>
+                    <div class="credit__rate-from">От 0.5%</div>
+                </div>
+                <button class="button button-sec" type="button">Получить</button>
             </div>
-            <div class="showcase-credit-rate">
-                <div class="credit-rate__bid">Ставка</div>
-                <div class="credit-rate__from">От 0.5%</div>
-            </div>
-            <button type="button" class="button showcase__credit-get">Получить</button>
         </div>
 
         <div class="search-form">
             <h2 class="search-form__title">Поисковая система</h2>
             <form action="" method="get">
                 <input class="search-form__input" name="search" placeholder="Search" type="search">
-                <button class="button-main search-form__button" type="submit" >Искать</button>
+                <button class="button button-main" type="submit" >Искать</button>
             </form>
         </div>
 
