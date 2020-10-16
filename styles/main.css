@@ -101,11 +101,70 @@ body {
     text-align: center;
 }
 
+/*BURGER BTN*/
+.container-btn {
+    display: none;
+    justify-content: center;
+    width: 100%;
+}
+.menu-btn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+
+.menu-btn__burger {
+    width: 40px;
+    height: 3px;
+    background: #fff;
+    border-radius: 3px;
+    transition: all .5s ease-in-out;
+}
+
+.menu-btn__burger::before,
+.menu-btn__burger::after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    width: 40px;
+    height: 3px;
+    background: #fff;
+    border-radius: 2px;
+    transition: all .4s ease-in-out;
+}
+
+.menu-btn__burger::before {
+    transform: translateY(-10px);
+}
+
+.menu-btn__burger::after {
+    transform: translateY(10px);
+}
+
+/*BURGER BTN ANIMATION*/
+
+.menu-btn.open .menu-btn__burger {
+    transform: translateX(-40px);
+    background: transparent;
+}
+
+.menu-btn.open .menu-btn__burger:before {
+    transform: rotate(45deg) translate(25px, -25px);
+}
+
+.menu-btn.open .menu-btn__burger:after {
+    transform: rotate(-45deg) translate(25px, 25px);
+}
+
 .footer-nav ul {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    /*width: 1024px;*/
     margin: 0 auto;
     list-style: none;
 }
@@ -153,5 +212,13 @@ body {
 
     .showcase-item-credit div {
         padding-left: 5px;
+    }
+
+    .container-btn {
+        display: flex;
+    }
+
+    .footer-nav {
+        display: none;
     }
 }
