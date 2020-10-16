@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=310px, user-scalable=yes, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="./styles/normalize.css">
     <link rel="stylesheet" href="./styles/main.css">
     <script async src="https://cse.google.com/cse.js?cx=ef1ce4c9c7c710770"></script>
@@ -15,12 +15,18 @@
     <header class="header">
         <div class="header-content">
             <a href="#" class="header-content__logo">Aidacredit</a>
-            <button class="button button-main" type="button">Контакты</button>
+            <button id="contacts-show" class="button button-main" type="button">Контакты</button>
         </div>
     </header>
 
     <main>
+        <dialog>
+            <button id="contacts-close" class="button button-close"></button>
+            <div class="dialog-content">
+                <p>Телефон: +1 111 111 111</p>
+            </div>
 
+        </dialog>
         <div class="showcase">
             <div class="showcase-item">
                 <div class="showcase-item__logo"><img src="./img/bank1.png" alt=""></div>
