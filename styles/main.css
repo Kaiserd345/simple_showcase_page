@@ -39,7 +39,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 8vh;
+    height: 70px;
     width: 90%;
     margin: 0 auto;
 }
@@ -93,7 +93,7 @@ dialog::backdrop {
 .showcase-item {
     box-sizing: content-box;
     width: 90%;
-    height: 15vh;
+    min-height: 15vh;
     padding: 0 15px;
     margin: 0 auto 10px;
     display: inherit;
@@ -114,9 +114,21 @@ dialog::backdrop {
 /*SEARCH FORM STYLE*/
 
 .search-form {
-    width: 30%;
-    margin: 0 auto;
+    width: 50%;
+    margin: 0 auto 20px;
     text-align: center;
+}
+
+#___gcse_0 > div > div > form > table > tbody > tr > td.gsc-search-button button{
+    width: 120px;
+    font-size: 15px;
+    background-color: #eb6a5a;
+    color: white;
+    cursor: pointer;
+}
+
+#___gcse_0 > div > div > form > table > tbody > tr > td.gsc-input {
+    padding-right: 0;
 }
 
 /*FOOTER STYLES*/
@@ -188,6 +200,8 @@ dialog::backdrop {
     transform: rotate(-45deg) translate(25px, 25px);
 }
 
+/* NAVIGATION */
+
 .footer-nav ul {
     display: flex;
     justify-content: space-around;
@@ -217,12 +231,14 @@ dialog::backdrop {
     text-transform: uppercase;
 }
 
-/* tablet */
+/* MOBILE */
 @media screen and (max-width: 768px) {
 
     .showcase-item {
+        box-sizing: border-box;
         width: 100%;
         height: 40vh;
+        min-height: 250px;
         flex-direction: column;
         justify-content: center;
     }
@@ -245,7 +261,42 @@ dialog::backdrop {
         display: flex;
     }
 
+    /* SEARCH FORM MOBILE*/
+
+    .search-form {
+        width: 70%;
+    }
+
+    #___gcse_0 > div > div > form > table > tbody > tr  td{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+    }
+
+    .gsib_a{
+        padding: 5px 0 !important;
+    }
+
+    #___gcse_0 > div > div > form > table > tbody > tr > td.gsc-input{
+        margin-left: 3px;
+        max-width: 100%;
+        border: 1px solid #eb6a5a;
+    }
+
+    #___gcse_0 > div > div > form > table > tbody > tr > td.gsc-search-button button{
+        min-width: 100%;
+        margin: 10px 0 0 0 !important;
+    }
+
+    #___gcse_0 > div > div > form > table > tbody > tr > td.gsc-search-button {
+        min-width: 100%;
+    }
+
+    /* FOOTER MOBILE */
+
     .footer-nav {
         display: none;
     }
 }
+
+
