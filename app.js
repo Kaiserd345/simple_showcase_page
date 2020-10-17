@@ -37,19 +37,18 @@ window.onload = function() {
     //Analytics
 
     //click Get Loan
-
-    //click Search
     const getLoanBtns = document.querySelectorAll('.get-loan');
 
     for (let buttonItem of getLoanBtns) {
         buttonItem.addEventListener('click', () => {
             gtag('event', 'click', {'event_category': 'button'});
-            ym(68396329,'reachGoal','get-loan');
+            ym(68396329,'reachGoal','get-loan'); return true;
         })
     }
 
+    //click Search
     searchButton.addEventListener('click',() => {
         gtag('event', 'clickSB', {'event_category': 'searchButton'});
-        ym(68396329,'reachGoal','clickSB')
+        ym(68396329,'reachGoal','clickSB'); return true;
     })
 }
