@@ -1,6 +1,16 @@
 <!doctype html>
 <html lang="ru">
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180724862-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-180724862-2');
+    </script>
+    
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=310px, user-scalable=yes, initial-scale=1.0">
@@ -8,6 +18,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="./styles/normalize.css">
     <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/react-uwp/1.2.31/css/segoe-mdl2-assets.css" integrity="sha512-KZGwB0jIzU32wqO+0LsuEodSmIn+UhPU1ry/5xsL/zFyUVNNoxr9ipxRi8ku5LcORlei3drHlaV8dYgQDYutDA==" crossorigin="anonymous" />
     <script async src="https://cse.google.com/cse.js?cx=ef1ce4c9c7c710770"></script>
 </head>
 <body>
@@ -19,13 +30,13 @@
     </header>
 
     <main>
-        <dialog>
+        <div class="pop-up">
             <button id="contacts-close" class="button button-close"></button>
-            <div class="dialog-content">
+            <div class="pop-up__content">
                 <p>Телефон: +1 111 111 111</p>
             </div>
 
-        </dialog>
+        </div>
         <div class="showcase">
             <div class="showcase-item">
                 <div class="showcase-item__logo"><img src="./img/bank1.png" alt=""></div>
@@ -37,7 +48,7 @@
                     <div class="credit__rate-bid">Ставка:</div>
                     <div class="credit__rate-from">От 0.5%</div>
                 </div>
-                <button class="button button-sec" type="button">Получить</button>
+                <button class="button button-sec get-loan" type="submit">Получить</button>
             </div>
 
             <div class="showcase-item">
@@ -50,7 +61,7 @@
                     <div class="credit__rate-bid">Ставка:</div>
                     <div class="credit__rate-from">От 0.5%</div>
                 </div>
-                <button class="button button-sec" type="button">Получить</button>
+                <button class="button button-sec get-loan" type="submit">Получить</button>
             </div>
 
             <div class="showcase-item">
@@ -63,7 +74,7 @@
                     <div class="credit__rate-bid">Ставка:</div>
                     <div class="credit__rate-from">От 0.5%</div>
                 </div>
-                <button class="button button-sec" type="button">Получить</button>
+                <button class="button button-sec get-loan" type="submit">Получить</button>
             </div>
 
             <div class="showcase-item">
@@ -76,16 +87,14 @@
                     <div class="credit__rate-bid">Ставка:</div>
                     <div class="credit__rate-from">От 0.5%</div>
                 </div>
-                <button class="button button-sec" type="button">Получить</button>
+                <button class="button button-sec get-loan" type="submit">Получить</button>
             </div>
         </div>
 
+        <div class="separator"></div>
+
         <div class="search-form">
             <h2 class="search-form__title">Поисковая система</h2>
-<!--            <form action="" method="get">-->
-<!--                <input class="search-form__input" name="search" placeholder="Search" type="search">-->
-<!--                <button class="button button-main" type="submit" >Искать</button>-->
-<!--            </form>-->
             <div class="gcse-search" data-mobileLayout="false"></div>
         </div>
 

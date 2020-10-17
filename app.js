@@ -1,14 +1,20 @@
 window.onload = function() {
     //Modal Pop-Up
-    let dialog = document.querySelector('dialog');
-    document.querySelector('#contacts-show').onclick = function() {
-        dialog.showModal();
-    };
-    document.querySelector('#contacts-close').onclick = function() {
-        dialog.close();
-    };
+    const openPopUp = document.getElementById('contacts-show');
+    const closePopUp = document.getElementById('contacts-close');
+    let popUp = document.querySelector('.pop-up');
 
-//Burger Button toggle
+    openPopUp.addEventListener('click', () =>{
+        popUp.classList.add('show');
+    })
+
+    closePopUp.addEventListener('click', () => {
+        popUp.classList.remove('show');
+    })
+
+
+
+    //Burger Button toggle
     const menuBtn = document.querySelector('.menu-btn');
     let menuOpen = false;
 
@@ -22,9 +28,28 @@ window.onload = function() {
         }
     });
 
-//Text for GoogleSearch button
+    //Text for GoogleSearch button
     const searchButton = document.querySelector('.gsc-search-button-v2');
     console.log(searchButton);
     searchButton.innerText = "Искать";
     console.log(searchButton);
+
+    //Analytics
+
+    //click Get Loan
+
+    //click Search
+    const getLoanBtns = document.querySelectorAll('.get-loan');
+
+    for (let buttonItem of getLoanBtns) {
+        buttonItem.addEventListener('click', () => {
+            gtag('event', 'click', {'event_category': 'button'});
+            ym(68396329,'reachGoal','get-loan');
+        })
+    }
+
+    searchButton.addEventListener('click',() => {
+        gtag('event', 'clickSB', {'event_category': 'searchButton'});
+        ym(68396329,'reachGoal','clickSB')
+    })
 }

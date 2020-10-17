@@ -58,29 +58,40 @@ body {
 
 /*MODAL POP-UP*/
 
-dialog{
-    border: none;
-    border-radius: 5px;
-    background: #fff;
-}
-
-dialog::backdrop {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-.button-close {
+.pop-up {
+    display: none;
     position: absolute;
-    top: 5px;
-    right: 3px;
-    background: url( "../img/window-close-solid.svg") center no-repeat;
-    color: white;
+    right: 0;
+    top: 0;
+    width: 300px;
+    height: 70px;
+    text-align: center;
+    background-color: #46699e;
+    border-radius: 3px;
+    vertical-align: center;
+}
+
+.show {
+    display: block;
+}
+
+
+.button-close:after {
+    font-family: 'Segoe MDL2 Assets';
+    content: '';
+    position: absolute;
+    top: 8px;
+    right: 5px;
+    color: #fff;
     width: 25px;
     height: 25px;
 }
 
-.dialog-content {
-    padding: 30px;
+.pop-up__content p{
+    color: #fff;
+    margin: 0;
 }
+
 
 /*SHOWCASE STYLE*/
 
@@ -93,7 +104,7 @@ dialog::backdrop {
 .showcase-item {
     box-sizing: content-box;
     width: 90%;
-    min-height: 15vh;
+    min-height: 16vh;
     padding: 0 15px;
     margin: 0 auto 10px;
     display: inherit;
@@ -101,6 +112,10 @@ dialog::backdrop {
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #d7d5d5;
+}
+
+.showcase-item:last-child {
+    border-bottom: none;
 }
 
 .showcase-item__logo {
@@ -111,6 +126,13 @@ dialog::backdrop {
     margin-left: 3px;
 }
 
+/* SEPARATOR */
+
+.separator {
+    width: 30%;
+    margin: 40px auto;
+    border-bottom: 1px solid #46699e;
+}
 /*SEARCH FORM STYLE*/
 
 .search-form {
@@ -119,7 +141,13 @@ dialog::backdrop {
     text-align: center;
 }
 
-#___gcse_0 > div > div > form > table > tbody > tr > td.gsc-search-button button{
+.search-form__title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #242424;
+}
+
+#___gcse_0 td.gsc-search-button button{
     width: 120px;
     font-size: 15px;
     background-color: #eb6a5a;
@@ -127,7 +155,10 @@ dialog::backdrop {
     cursor: pointer;
 }
 
-#___gcse_0 > div > div > form > table > tbody > tr > td.gsc-input {
+#___gcse_0 td.gsc-search-button button:hover {
+    background-color: #e36354;
+}
+#___gcse_0 td.gsc-input {
     padding-right: 0;
 }
 
@@ -267,7 +298,7 @@ dialog::backdrop {
         width: 70%;
     }
 
-    #___gcse_0 > div > div > form > table > tbody > tr  td{
+    #___gcse_0 td{
         display: flex;
         flex-direction: column;
         align-content: center;
@@ -277,18 +308,18 @@ dialog::backdrop {
         padding: 5px 0 !important;
     }
 
-    #___gcse_0 > div > div > form > table > tbody > tr > td.gsc-input{
+    #___gcse_0 td.gsc-input{
         margin-left: 3px;
         max-width: 100%;
         border: 1px solid #eb6a5a;
     }
 
-    #___gcse_0 > div > div > form > table > tbody > tr > td.gsc-search-button button{
+    #___gcse_0 td.gsc-search-button button{
         min-width: 100%;
         margin: 10px 0 0 0 !important;
     }
 
-    #___gcse_0 > div > div > form > table > tbody > tr > td.gsc-search-button {
+    #___gcse_0 td.gsc-search-button {
         min-width: 100%;
     }
 
